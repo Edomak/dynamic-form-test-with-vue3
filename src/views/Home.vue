@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="vue_bg">
+    <FormTest />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import FormTest from '../components/FormTest.vue'
 
 export default defineComponent({
   name: 'Home',
   components: {
-    HelloWorld,
+    FormTest
   },
 });
 </script>
+
+<style lang="scss">
+
+  .vue_bg {
+    // background-image: url('/vue-bg.jpeg');
+    min-height: 100%;
+    background: linear-gradient(0deg, rgba(2, 24, 9, 0.26), rgba(100, 135, 105, 0.3)), url('/vue-bg.jpeg');
+    background-size: cover;
+  }
+  
+</style>

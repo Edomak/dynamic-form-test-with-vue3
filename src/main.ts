@@ -2,5 +2,16 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import { createDynamicForms } from '@asigloo/vue-dynamic-forms';
 
-createApp(App).use(store).use(router).mount('#app')
+require('@/styles/base.scss')
+
+const VueDynamicForms = createDynamicForms({
+    // Global Options go here
+});
+
+createApp(App)
+.use(store)
+.use(router)
+.use(VueDynamicForms)
+.mount('#app')
